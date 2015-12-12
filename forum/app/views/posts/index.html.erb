@@ -1,1 +1,9 @@
-<h1>HOLIS</h1>
+<% for post in @posts %>
+
+	<h2><%= link_to post.title, post %></h2>
+	<p>Published <%= time_ago_in_words(post.created_at) %> ago</p> 
+
+<% end %>
+
+<%= link_to 'New Post', new_post_path %><br>
+
