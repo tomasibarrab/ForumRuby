@@ -1,7 +1,10 @@
 <% for post in @posts %>
 
 	<h2><%= link_to post.title, post %></h2>
-	<p>Published <%= time_ago_in_words(post.created_at) %> ago</p> 
+	<p>Published <%= time_ago_in_words(post.created_at)%> ago</p>
+	<p>By <%= post.user.email %></p>
+
+	
 
 <% end %>
 
