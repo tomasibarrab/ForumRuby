@@ -1,8 +1,10 @@
 <body id="posts">
 <% for post in @posts %>
 	<div id="post">
+	<div id="post_content">
 		<h2 id="title"><%= link_to post.title, post %></h2>
-		<p id="date">Published <%= time_ago_in_words(post.created_at)%> ago By <%= post.user.email %></p>
+		<p id="date">Published <%= time_ago_in_words(post.created_at)%> ago By <b><%= post.user.email %></b></p>
+	</div>
 	</div>
 <% end %>
 </body>

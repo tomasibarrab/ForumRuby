@@ -1,10 +1,11 @@
-	<h1>
-	    <%= @post.title %><br>
-  	</h1>
-	<p>
-		<%= @post.content %><br>
-	</p>
+	<div id="post_content">
+		<h1 id="post_content_h1">
+		    <%= @post.title %><br>
+	  	</h1>
+		<p id="post_content_p">
+			<%= @post.content %><br>
+		</p>
+	</div><br>
 
 	<%= link_to 'Edit', edit_post_path(@post) %>
-	<%= link_to 'Delete', post_path(@post), method: :delete, data: {confirm: 'Are you sure?'} %><br><br><br>
-	<%= link_to 'Home', root_path %>
+	<%= link_to 'Delete', post_path(@post), method: :delete, data: {confirm: 'Are you sure?'} %>

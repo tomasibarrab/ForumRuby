@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html>
-
 	<head>
 	  <title>Rails Forum by tomasibarrab</title>
 	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -9,18 +7,23 @@
 	  <link{:rel: "stylesheet", href: "http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css"}>
 	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	  <%= csrf_meta_tags %>
-
 	</head>
 
 	<body id="body">
-		<h1 id="main_header.clearfix">Forum powered by Ruby on Rails</h1><br>
-			
+		<h1 id="high_title">Tomás Ibarra's</h1>
+		<h1 id="low_title"><%= link_to 'Forum powered by Ruby on Rails', root_path %></h1><br>
 			<nav id="wrapper">
-			<button id="myButton"><%= link_to 'New Post', new_post_path %></button>
+				<button id="myButton">
+					<% if user_signed_in? %>		
+					<%= link_to 'New Post', new_post_path %>
+					<% else %>
+					<%= link_to 'Sign In', new_user_registration_path %>
+					<%= link_to 'Sign Up' , new_user_session_path %>
+					<% end %>
+				</button>
 				<p class="notice"><%= notice %></p>
 			    <p class="alert"><%= alert %></p>
 		    <nav>
-	<%= yield %>
+		<%= yield %>
 	</body>
-
 </html>

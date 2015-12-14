@@ -16,7 +16,28 @@
 
 #body{
 	font-family: 'Lato', sans-serif;
-	background: #EFEFFB;
+	background: #e0fbdc;
+}
+
+#low_title{
+	font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+	font-weight: normal;
+    font-size: 1.75em;
+	letter-spacing: .2em;
+	line-height: 1.1em;
+	margin:0px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#high_title{
+	font-family: Gill Sans, Verdana;
+	font-size: 11px;
+	line-height: 14px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+	text-align: center;
 }
 
 #clearfix:before, #clearfix:after{
@@ -110,6 +131,24 @@
 	top:1px;
 }
 
+#post_content {
+	background: white;
+	padding: 2em 5%;
+	border-radius: .5em;
+}
+
+#post_content_h1{
+		font-weight: 100;
+		font-size: 2em;
+		color: #397CAC;
+		margin-top: 0;
+}
+#post_content_p{
+		color: #B2BAC2;
+		font-size: 0.9rem;
+		font-weight: 100;
+		line-height: 1.5;
+}
 
 
 
