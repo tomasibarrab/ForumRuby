@@ -1,12 +1,9 @@
+<body id="posts">
 <% for post in @posts %>
-
-	<h2><%= link_to post.title, post %></h2>
-	<p>Published <%= time_ago_in_words(post.created_at)%> ago</p>
-	<p>By <%= post.user.email %></p>
-
-	
-
+	<div id="post">
+		<h2 id="title"><%= link_to post.title, post %></h2>
+		<p id="date">Published <%= time_ago_in_words(post.created_at)%> ago By <%= post.user.email %></p>
+	</div>
 <% end %>
-
-<%= link_to 'New Post', new_post_path %><br>
+</body>
 

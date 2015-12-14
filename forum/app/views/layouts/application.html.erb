@@ -1,17 +1,26 @@
 <!DOCTYPE html>
+
 <html>
-<head>
-  <title>Forum</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
 
-	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+	<head>
+	  <title>Rails Forum by tomasibarrab</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <link{ rel: "stylesheet", href: "http://fonts.googleapis.com/css?family=Lato:300,400,700", type: "text/css"}>
+	  <link{:rel: "stylesheet", href: "http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css"}>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
 
-<%= yield %>
+	</head>
 
-</body>
+	<body id="body">
+		<h1 id="main_header.clearfix">Forum powered by Ruby on Rails</h1><br>
+			
+			<nav id="wrapper">
+			<button id="myButton"><%= link_to 'New Post', new_post_path %></button>
+				<p class="notice"><%= notice %></p>
+			    <p class="alert"><%= alert %></p>
+		    <nav>
+	<%= yield %>
+	</body>
+
 </html>
