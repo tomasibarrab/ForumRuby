@@ -13,14 +13,14 @@
 		<h1 id="high_title">Tomás Ibarra's</h1>
 		<h1 id="low_title"><%= link_to 'Forum powered by Ruby on Rails', root_path %></h1><br>
 			<nav id="wrapper">
-				<button id="myButton">
+				
 					<% if user_signed_in? %>		
-					<%= link_to 'New Post', new_post_path %>
+					<button id="myButton"><%= link_to 'New Post', new_post_path %></button>
 					<% else %>
-					<%= link_to 'Sign In', new_user_registration_path %>
-					<%= link_to 'Sign Up' , new_user_session_path %>
+					<button id="myButton"> <%= link_to 'Sign In', new_user_session_path %></button>
+					<button id="myButton"><%= link_to 'Sign Up' , new_user_registration_path %></button>
 					<% end %>
-				</button>
+				
 				<p class="notice"><%= notice %></p>
 			    <p class="alert"><%= alert %></p>
 		    <nav>
