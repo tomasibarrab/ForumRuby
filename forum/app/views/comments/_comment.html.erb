@@ -1,4 +1,13 @@
-<div id = "comment">
+<div id = "post_content_p">
 	<p><%= comment.comment%></p>
 	<p>By <%= comment.user.email%></p>
+	<p>
+		<button id="myButton">
+			<%= link_to "Edit comment", edit_post_comment_path(comment.post, comment)%>
+		</button>
+		<button id="myButton">
+			<%= link_to "Delete comment", [comment.post, comment], method: :delete, data: {confirm: 'Are you sure?'}%>
+		</button>
+	</p>
+	
 </div>
