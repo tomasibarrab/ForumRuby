@@ -138,14 +138,30 @@
 }
 
 #post_content_h1{
-		font-weight: 100;
-		font-size: 2em;
-		color: #397CAC;
-		margin-top: 0;
+	font-weight: 100;
+	font-size: 2em;
+	color: #397CAC;
+	margin-top: 0;
 }
 #post_content_p{
-		color: #B2BAC2;
-		font-size: 0.9rem;
-		font-weight: 100;
-		line-height: 1.5;
+	color: #97A18D;
+	font-size: 0.9rem;
+	font-weight: 100;
+	line-height: 1.5;
+}
+
+#comment{
+	border-bottom: 1px solid #d1d1d1;
+	padding-bottom: 1em;
+	margin-bottom: 1em;
+}
+
+#comment_comment{
+	width: 100%;
+	min-height: 200px;
+}
+
+#comment_area{
+	width: 100%;
+	min-height: 200px; 
 }
